@@ -1,5 +1,5 @@
 # Centro de Formación Profesional Nro 35.
-* Curso: Base de Datos y SQL
+**Curso: Base de Datos y SQL**
 Duración: 70 hs
 Días: Martes (Presencial) y Jueves (Virtual)
 Horario: 13:00 a 15:00 hs
