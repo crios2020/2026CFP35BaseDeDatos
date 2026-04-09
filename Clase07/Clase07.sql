@@ -291,6 +291,10 @@ select * from clientes where codigo=5;
 select * from clientes where codigo<5;
 select * from clientes where codigo<=5;
 
+-- operador not != <>
+select * from clientes where nombre!='Laura';
+select * from clientes where nombre<>'Laura';
+
 -- Mostrar las facturas con monto entre 20000 y 30000
 select * from facturas where monto>=20000 and monto<=30000;
 
@@ -338,7 +342,8 @@ insert into clientes (nombre,apellido) values
     ('Marcelo','Perez'), ('Marcela','Perez'),
     ('Magali','Perez'), ('Melina','Perez'),
     ('Mirta','Perez'), ('Mercedes','Perez');
-    
+-- select * from libros where autor='Borges';
+-- select * from libros where autor like '%Borges%';
 select * from clientes where nombre like 'm%';
 select * from clientes where nombre like 'ma%';
 select * from clientes where nombre like 'mar%';
