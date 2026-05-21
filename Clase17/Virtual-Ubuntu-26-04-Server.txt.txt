@@ -1,0 +1,17 @@
+-- UBUNTU - SERVER - 26.04 LTS
+
+-- Lista de videos sobre Virtualización
+https://www.youtube.com/playlist?list=PLMLmotKSEKYdhb3F3JpbtZPewb-9wZTji
+
+Virtualización:	Oracle VirtualBox - https://www.virtualbox.org/
+				Link de descarga: https://www.virtualbox.org/wiki/Downloads
+
+Sistema Operativo: Ubuntu Server 26.04 LTS - https://ubuntu.com/
+				Link de descarga: https://ubuntu.com/download/server
+
+user:	user
+pass:	java
+
+IP: 	192.168.104.146
+
+

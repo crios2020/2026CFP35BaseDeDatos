@@ -1,0 +1,55 @@
+-- UBUNTU - SERVER - 26.04 LTS
+
+-- Lista de videos sobre Virtualización
+https://www.youtube.com/playlist?list=PLMLmotKSEKYdhb3F3JpbtZPewb-9wZTji
+
+Virtualización:	Oracle VirtualBox - https://www.virtualbox.org/
+				Link de descarga: https://www.virtualbox.org/wiki/Downloads
+
+Sistema Operativo: Ubuntu Server 26.04 LTS - https://ubuntu.com/
+				Link de descarga: https://ubuntu.com/download/server
+
+user:	user
+pass:	java
+
+IP: 	192.168.104.146
+
+
+desde terminal iniciamos sessión en el server con
+ssh user@192.168.104.146
+
+
+docker run -d \
+  --name mysql-server \
+  -p 3306:3306 \
+  -e MYSQL_ROOT_PASSWORD=java \
+  -e MYSQL_DATABASE=user \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=java \
+  --restart unless-stopped \
+  mysql:latest
+
+docker run -d \
+  --name mariadb-server \
+  -p 3307:3307 \
+  -e MARIADB_ROOT_PASSWORD=java \
+  -e MARIADB_DATABASE=user \
+  -e MARIADB_USER=user \
+  -e MARIADB_PASSWORD=java \
+  --restart unless-stopped \
+  mariadb:latest \
+  --port=3307
+
+docker run -d \
+  --name mysql5-server \
+  -p 3308:3308 \
+  -e MYSQL_ROOT_PASSWORD=java \
+  -e MYSQL_DATABASE=user \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=java \
+  --restart unless-stopped \
+  mysql:5.7 \
+  --port=3308
+
+
+
