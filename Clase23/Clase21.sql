@@ -370,3 +370,35 @@ insert into detalles values
 
 select * from detalles;
 select count(*) cantidad from detalles;
+
+use negocio;
+show tables;
+
+-- consulta del producto cartesiano
+select count(*) cantidad from clientes;             -- 50
+select count(*) cantidad from facturas;             -- 50
+select count(*) cantidad from detalles;             -- 60
+select count(*) cantidad from articulos;            -- 45
+
+select 50*50*60*45;                                 -- 6750000
+
+select * from clientes, facturas, detalles, articulos;
+select count(*) cantidad from clientes, facturas, detalles, articulos;
+use negocio;
+-- consulta del producto relacionado
+select * 
+    from clientes c join facturas f on c.codigo=f.codigo_cliente
+    join detalles d on f.letra=d.letra and f.numero=d.numero 
+    join articulos a on d.codigo=a.codigo;
+
+select count(*) cantidad 
+    from clientes c join facturas f on c.codigo=f.codigo_cliente
+    join detalles d on f.letra=d.letra and f.numero=d.numero 
+    join articulos a on d.codigo=a.codigo;
+use negocio;
+-- Que articulos compro Juan Perez?
+select a.codigo, a.nombre, a.precio, a.stock
+    from clientes c join facturas f on c.codigo=f.codigo_cliente
+    join detalles d on f.letra=d.letra and f.numero=d.numero 
+    join articulos a on d.codigo=a.codigo
+    where c.nombre='Juan' and c.apellido='Perez';
