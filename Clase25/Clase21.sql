@@ -440,18 +440,5 @@ select distinct a.codigo, a.nombre
     where f.fecha=curdate();
 update facturas set fecha=curdate() where letra='B';
 -- 6- Informar la lista de artículos vendidos en este mes.
-use negocio;
-select distinct a.codigo, a.nombre 
-    from facturas f join detalles d on f.letra=d.letra and f.numero=d.numero 
-    join articulos a on d.codigo=a.codigo
-    where year(fecha)=year(curdate()) and month(fecha)=month(curdate());
-
 -- 7- Informar la lista de artículos vendidos en este año y la cantidad vendida.
-select distinct a.codigo, a.nombre, sum(cantidad) cantidad_vendida 
-    from facturas f join detalles d on f.letra=d.letra and f.numero=d.numero 
-    join articulos a on d.codigo=a.codigo
-    where year(fecha)=year(curdate())
-    group by a.codigo;
-
-
 
