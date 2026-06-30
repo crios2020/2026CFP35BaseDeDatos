@@ -1,0 +1,14 @@
+Como instalar Docker
+https://chatgpt.com/c/6a3d5209-4470-83e9-adc8-f55c5752184a
+
+Como instalar mongodb en Docker
+docker run -d \
+  --name mongodb \
+  --restart always \
+  -p 27017:27017 \
+  -e MONGO_INITDB_ROOT_USERNAME=user \
+  -e MONGO_INITDB_ROOT_PASSWORD=java \
+  mongo:7
+
+  Conectar VSCode a mongodb
+  - Instalamos Python
